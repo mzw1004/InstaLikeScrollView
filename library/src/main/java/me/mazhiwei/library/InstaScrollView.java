@@ -166,12 +166,6 @@ public class InstaScrollView extends FrameLayout implements NestedScrollingParen
 
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @NonNull int[] consumed) {
-        if (dy < 0) {
-            // 往下滑
-        } else if (dy > 0) {
-            // 往上滑
-        }
-
         if (shouldMoveHead) {
             int totalOffsetY = getDivideY() - HEAD_OFFSET;
             int offsetY = dy > totalOffsetY ? totalOffsetY : dy;
